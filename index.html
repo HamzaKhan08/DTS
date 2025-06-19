@@ -1,0 +1,237 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Document Management System</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+  <link href="https://ai-public.creatie.ai/gen_page/tailwind-custom.css" rel="stylesheet"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js"></script>
+  <script src="https://cdn.tailwindcss.com/3.4.5?plugins=forms@0.5.7,typography@0.5.13,aspect-ratio@0.4.2,container-queries@0.1.1"></script>
+  <script src="https://ai-public.creatie.ai/gen_page/tailwind-config.min.js" data-color="#000000" data-border-radius="medium"></script>
+</head>
+<body class="bg-gray-900 text-gray-100 min-h-screen flex flex-col dark">
+  <nav class="border-b border-gray-800 bg-gray-800">
+      <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex items-center justify-between h-16">
+              <div class="flex items-center space-x-8">
+                  <h1 class="text-2xl">TrackVaults.com</h1>
+              </div><ul class="flex space-x-6" id="nav-links"><li><a href="#" class="flex items-center p-2 text-custom rounded-button hover:bg-gray-700"><i class="fas fa-home mr-2"></i>Dashboard</a></li><li><a href="#" class="flex items-center p-2 text-white rounded-button hover:bg-gray-700"><i class="fas fa-folder mr-2"></i>Documents</a></li><li><a href="#" class="flex items-center p-2 text-white rounded-button hover:bg-gray-700"><i class="fas fa-users mr-2"></i>Team</a></li><li><a href="#" class="flex items-center p-2 text-white rounded-button hover:bg-gray-700"><i class="fas fa-chart-bar mr-2"></i>Analytics</a></li></ul>
+              
+              <div class="flex items-center space-x-4">
+                  <button class="p-2 rounded-button hover:bg-gray-800">
+                      <i class="fas fa-bell text-gray-400"></i>
+                  </button>
+                  <button class="p-2 rounded-button hover:bg-gray-800">
+                      <i class="fas fa-moon text-gray-400"></i>
+                  </button>
+                  <div class="relative">
+                      <button class="flex items-center space-x-3 rounded-button hover:bg-gray-800 p-2">
+                          <img src="https://creatie.ai/ai/api/search-image?query=A professional headshot of a young business person with a confident smile, wearing modern business attire, against a neutral background&width=40&height=40&orientation=squarish&flag=c5c890d3-f6e3-4da7-8fc3-c487618ecd46&flag=d64a789f-af67-45a1-ba08-1ac2db29933b&flag=3320054e-d387-4208-a522-9a06469449aa&flag=aefc900e-e35f-4cff-a2af-300c4d0c1a76&flag=dfc11f67-1a8c-4097-bf47-668c9f97de02&flag=67cbc1d1-8094-494c-96f8-f9bfd1b5d196&flag=02a463df-01e1-4579-b184-63069b67d46a&flag=96c7e518-b143-4815-aeb9-2104a7f6fcde&flag=1cfb5e58-820d-4fbb-a4d1-d159822fc7a5&flag=9ad12d53-4937-4a1b-a58e-7d6c09dfacd5&flag=71613074-461e-463c-b435-7a90bbdf0f9d" class="w-8 h-8 rounded-full object-cover" alt="Profile"/>
+                          <span class="text-sm font-medium">John Doe</span>
+                          <i class="fas fa-chevron-down text-sm text-gray-400"></i>
+                      </button>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </nav>
+  <div class="flex-1">
+      
+      <main class="flex-1 overflow-y-auto w-full">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+              <div class="bg-gray-800 rounded-lg p-6 mb-8">
+                  <div class="flex items-center justify-between mb-4">
+                      <h2 class="text-xl font-medium">Quick Actions</h2>
+                  </div>
+                  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                      <button class="flex items-center justify-center p-4 bg-gray-900 rounded-lg hover:bg-gray-700 transition-colors border border-gray-700 hover:scale-105 transform transition-transform duration-200">
+                          <div class="text-center">
+                              <i class="fas fa-cloud-upload-alt text-2xl text-custom mb-2"></i>
+                              <p class="font-medium">Upload Document</p>
+                              <p class="text-sm text-gray-400">Drag &amp; drop or browse</p>
+                          </div>
+                      </button>
+                      <button class="flex items-center justify-center p-4 bg-gray-900 rounded-lg hover:bg-gray-700 transition-colors border border-gray-700 hover:scale-105 transform transition-transform duration-200">
+                          <div class="text-center">
+                              <i class="fas fa-file-signature text-2xl text-green-500 mb-2"></i>
+                              <p class="font-medium">Generate Document</p>
+                              <p class="text-sm text-gray-400">Create from templates</p>
+                          </div>
+                      </button>
+                      <button class="flex items-center justify-center p-4 bg-gray-900 rounded-lg hover:bg-gray-700 transition-colors border border-gray-700 hover:scale-105 transform transition-transform duration-200">
+                          <div class="text-center">
+                              <i class="fas fa-tasks text-2xl text-blue-500 mb-2"></i>
+                              <p class="font-medium">Track Progress</p>
+                              <p class="text-sm text-gray-400">Monitor documents</p>
+                          </div>
+                      </button>
+                      <button class="flex items-center justify-center p-4 bg-gray-900 rounded-lg hover:bg-gray-700 transition-colors border border-gray-700 hover:scale-105 transform transition-transform duration-200">
+                          <div class="text-center">
+                              <i class="fas fa-share-alt text-2xl text-purple-500 mb-2"></i>
+                              <p class="font-medium">Share &amp; Collaborate</p>
+                              <p class="text-sm text-gray-400">Work with team</p>
+                          </div>
+                      </button>
+                  </div>
+                  <div class="mt-4 flex items-center justify-center">
+                      <div class="relative w-full max-w-2xl">
+                          <input type="file" class="hidden" id="fileInput"/>
+                          <label for="fileInput" class="w-full flex items-center justify-center p-6 border-2 border-dashed border-gray-700 rounded-lg hover:border-custom transition-colors cursor-pointer">
+                              <div class="text-center">
+                                  <i class="fas fa-cloud-upload-alt text-3xl text-gray-500 mb-2"></i>
+                                  <p class="font-medium">Drag and drop your files here</p>
+                                  <p class="text-sm text-gray-400">or click to browse</p>
+                              </div>
+                          </label>
+                      </div>
+                  </div>
+              </div>
+              <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 mt-8">
+                  <div class="bg-gray-800 border border-gray-700 p-6 rounded-lg hover:shadow-lg transition-shadow duration-200">
+                      <div class="flex items-center">
+                          <div class="flex-shrink-0">
+                              <i class="fas fa-file-alt text-2xl text-custom"></i>
+                          </div>
+                          <div class="ml-5">
+                              <h3 class="text-lg font-medium text-white">Total Documents</h3>
+                              <div class="mt-1 text-3xl font-semibold">1,234</div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="bg-gray-800 border border-gray-700 p-6 rounded-lg hover:shadow-lg transition-shadow duration-200">
+                      <div class="flex items-center">
+                          <div class="flex-shrink-0">
+                              <i class="fas fa-clock text-2xl text-custom"></i>
+                          </div>
+                          <div class="ml-5">
+                              <h3 class="text-lg font-medium text-white">Pending Review</h3>
+                              <div class="mt-1 text-3xl font-semibold">27</div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="bg-gray-800 border border-gray-700 p-6 rounded-lg hover:shadow-lg transition-shadow duration-200">
+                      <div class="flex items-center">
+                          <div class="flex-shrink-0">
+                              <i class="fas fa-check-circle text-2xl text-custom"></i>
+                          </div>
+                          <div class="ml-5">
+                              <h3 class="text-lg font-medium text-white">Approved</h3>
+                              <div class="mt-1 text-3xl font-semibold">892</div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="bg-gray-800 border border-gray-700 p-6 rounded-lg hover:shadow-lg transition-shadow duration-200">
+                      <div class="flex items-center">
+                          <div class="flex-shrink-0">
+                              <i class="fas fa-users text-2xl text-custom"></i>
+                          </div>
+                          <div class="ml-5">
+                              <h3 class="text-lg font-medium text-white">Team Members</h3>
+                              <div class="mt-1 text-3xl font-semibold">15</div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="mt-8 grid grid-cols-3 gap-6">
+                  <div class="col-span-2 bg-gray-800 border border-gray-700 rounded-lg p-6">
+                      <h2 class="text-lg font-medium mb-6">Document Activity</h2>
+                      <div id="activityChart" class="h-80"></div>
+                  </div>
+                  <div class="bg-gray-800 border border-gray-700 rounded-lg p-6">
+                      <h2 class="text-lg font-medium mb-6">Recent Activity</h2>
+                      <div class="space-y-4">
+                          <div class="flex items-start">
+                              <img src="https://creatie.ai/ai/api/search-image?query=A professional headshot of a young business woman with a warm smile, wearing modern business attire, against a neutral background&width=40&height=40&orientation=squarish&flag=21a74173-9eff-42d6-bdae-4b3ed71a4928&flag=ac5b6635-a7e9-47f9-83a2-25938a382c91&flag=a5a53aba-4f44-4c28-8391-cd841f64f50a&flag=a39af9da-b6fa-4859-ab19-b59bd4f20ff8&flag=b65614c7-c572-4fe2-9ee1-547c0807c7f3&flag=018f5050-93ff-49f5-a131-3ff48b269e63&flag=23928b5a-7909-4906-ac53-d0ce8ac06012&flag=2b161d2f-8d1c-42ff-b22d-83999322b17d&flag=d9b4bd22-4900-44dd-9793-7c41afe2ef91&flag=c2b0eb76-8b11-4da0-b961-83cb610b7fd8&flag=f77d7641-9525-464e-a9f8-a3fef5567f16" class="w-8 h-8 rounded-full" alt="User"/>
+                              <div class="ml-3">
+                                  <p class="text-sm">Sarah uploaded <span class="text-custom">Q4 Report.pdf</span></p>
+                                  <p class="text-xs text-gray-400">2 minutes ago</p>
+                              </div>
+                          </div>
+                          <div class="flex items-start">
+                              <img src="https://creatie.ai/ai/api/search-image?query=A professional headshot of a middle-aged business man with glasses, wearing a suit, against a neutral background&width=40&height=40&orientation=squarish&flag=0854b1bb-1195-4e88-ac97-94e9d752aaff&flag=a35a50fb-735b-47ec-97d8-9aa2ca6aac50&flag=1b65574c-2340-43c7-972d-f2bec221bbe4&flag=d488880d-c530-4066-a895-949b794e3e03&flag=8a2e0be3-e289-4cca-b5f8-7683b66a1728&flag=3bd58413-7def-4b3f-9061-72ea5f8fe95c&flag=2ebf5436-36b3-4352-9874-46a48e0712cb&flag=59954a92-e431-4c0d-b881-2ee744ef1fa3&flag=2bfe1c00-5ead-48f6-a5f6-bbbf376bf4c2&flag=e0d2590d-b270-4666-a8ea-95f784e247fb&flag=27776915-8baa-4483-b875-a025da96d588" class="w-8 h-8 rounded-full" alt="User"/>
+                              <div class="ml-3">
+                                  <p class="text-sm">Mike approved <span class="text-custom">Contract.docx</span></p>
+                                  <p class="text-xs text-gray-400">15 minutes ago</p>
+                              </div>
+                          </div>
+                          <div class="flex items-start">
+                              <img src="https://creatie.ai/ai/api/search-image?query=A professional headshot of a young business person with a confident expression, wearing modern business attire, against a neutral background&width=40&height=40&orientation=squarish&flag=062180d8-48f1-4476-9bd9-2208ce245085&flag=0d8a0efb-8112-43af-ad10-9dcff5e00107&flag=770a406f-ffb7-460d-99da-49562711bd22&flag=d7ef550f-e46c-445d-952f-3dc29b176283&flag=3c30521a-e44c-429d-bc81-af919f9c4312&flag=eed6d63d-7d44-47b6-a5bf-3c2b1da048e2&flag=5dbc8691-aeaf-4eff-852b-c6087e2ac83b&flag=4582fd02-ec49-4bc2-9e8a-1bc611748c7b&flag=0792cf12-5bdd-4a15-bb33-a6899fb5569d&flag=65bf0fdf-5308-4b5b-9c17-c8e249efa125&flag=cae1943c-3a9b-41d5-bcad-3af5c95ee8ef" class="w-8 h-8 rounded-full" alt="User"/>
+                              <div class="ml-3">
+                                  <p class="text-sm">Alex commented on <span class="text-custom">Proposal.pdf</span></p>
+                                  <p class="text-xs text-gray-400">1 hour ago</p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="mt-8">
+                  <div class="flex items-center justify-between mb-6"><h2 class="text-lg font-medium">Recent Documents</h2><div class="flex items-center space-x-4"><div class="w-96 relative"><input type="text" placeholder="Search documents..." class="w-full bg-gray-800 text-gray-100 rounded-button pl-10 pr-4 py-2 focus:ring-2 focus:ring-custom focus:outline-none"/><i class="fas fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i></div><button class="bg-custom text-white px-4 py-2 rounded-button hover:bg-custom/90 hover:scale-105 transform transition-transform duration-200"><i class="fas fa-plus mr-2"></i>Upload New</button></div></div>
+                  <div class="overflow-x-auto w-full"><table class="min-w-full divide-y divide-gray-700"><thead><tr><th class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">Document</th><th class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">Size</th><th class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">Uploaded By</th><th class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">Upload Date</th><th class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">Status</th><th class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">Actions</th></tr></thead><tbody class="divide-y divide-gray-700"><tr class="hover:bg-gray-700"><td class="px-6 py-4"><div class="flex items-center"><i class="fas fa-file-pdf text-xl text-red-500 mr-3"></i><div><h3 class="font-medium text-white">Q4 Financial Report</h3><p class="text-xs text-gray-400">Dean</p></div></div></td><td class="px-6 py-4 text-white">2.3 MB</td><td class="px-6 py-4"><div class="flex items-center"><img src="https://creatie.ai/ai/api/search-image?query=A professional headshot of a young business woman with a warm smile&width=24&height=24&flag=4b6db898-09c6-4526-ae4f-ffecf2085edd&flag=65b26535-9933-4e63-afb2-c10eefe96210&flag=a262f23b-96cf-4aa6-b201-af6ecc5bb9bb" class="w-6 h-6 rounded-full mr-2"/><span>Sarah Chen</span></div></td><td class="px-6 py-4 text-white">2024-02-15 14:30</td><td class="px-6 py-4"><div class="flex space-x-2"><button class="px-3 py-1 bg-green-600 text-white rounded hover:bg-green-700">Approve</button><button class="px-3 py-1 bg-red-600 text-white rounded hover:bg-red-700">Reject</button></div></td></tr><tr class="hover:bg-gray-700"><td class="px-6 py-4"><div class="flex items-center"><i class="fas fa-file-word text-xl text-blue-500 mr-3"></i><div><h3 class="font-medium text-white">Project Proposal</h3><p class="text-xs text-gray-400">Professor</p></div></div></td><td class="px-6 py-4 text-white">1.8 MB</td><td class="px-6 py-4"><div class="flex items-center"><img src="https://creatie.ai/ai/api/search-image?query=A professional headshot of a middle-aged business man&width=24&height=24&flag=290cb615-9769-43e6-94fe-c2f5fe3cb8ca&flag=07a524eb-813b-4378-a1d3-e46563f496de&flag=9dbed2b0-0858-48c1-9efd-adb24316ba02" class="w-6 h-6 rounded-full mr-2"/><span>Mike Johnson</span></div></td><td class="px-6 py-4 text-white">2024-02-15 11:45</td><td class="px-6 py-4"><div class="flex space-x-2"><button class="px-3 py-1 bg-green-600 text-white rounded hover:bg-green-700">Approve</button><button class="px-3 py-1 bg-red-600 text-white rounded hover:bg-red-700">Reject</button></div></td></tr><tr class="hover:bg-gray-700"><td class="px-6 py-4"><div class="flex items-center"><i class="fas fa-file-excel text-xl text-green-500 mr-3"></i><div><h3 class="font-medium text-white">Sales Analysis</h3><p class="text-xs text-gray-400">HOD</p></div></div></td><td class="px-6 py-4 text-white">956 KB</td><td class="px-6 py-4"><div class="flex items-center"><img src="https://creatie.ai/ai/api/search-image?query=A professional headshot of a young business person&width=24&height=24&flag=7efa85f1-d6be-47b7-915e-86ff289ef02d&flag=c9bd9c22-b246-496b-8f65-3cbb7299d5b4&flag=acbd4a21-1780-437c-8456-1bf90e0c4603" class="w-6 h-6 rounded-full mr-2"/><span>Alex Wong</span></div></td><td class="px-6 py-4 text-white">2024-02-14 09:15</td><td class="px-6 py-4"><div class="flex space-x-2"><button class="px-3 py-1 bg-green-600 text-white rounded hover:bg-green-700">Approve</button><button class="px-3 py-1 bg-red-600 text-white rounded hover:bg-red-700">Reject</button></div></td></tr></tbody></table></div>
+              </div>
+          </div>
+      </main>
+  </div>
+  <script>
+      const chart = echarts.init(document.getElementById('activityChart'));
+      const option = {
+          animation: false,
+          tooltip: {
+              trigger: 'axis'
+          },
+          grid: {
+              left: '3%',
+              right: '4%',
+              bottom: '3%',
+              containLabel: true
+          },
+          xAxis: {
+              type: 'category',
+              boundaryGap: false,
+              data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+              axisLine: {
+                  lineStyle: {
+                      color: '#4B5563'
+                  }
+              },
+              axisLabel: {
+                  color: '#9CA3AF'
+              }
+          },
+          yAxis: {
+              type: 'value',
+              axisLine: {
+                  lineStyle: {
+                      color: '#4B5563'
+                  }
+              },
+              axisLabel: {
+                  color: '#9CA3AF'
+              },
+              splitLine: {
+                  lineStyle: {
+                      color: '#374151'
+                  }
+              }
+          },
+          series: [{
+              name: 'Uploads',
+              type: 'line',
+              smooth: true,
+              data: [30, 40, 35, 50, 45, 35, 40],
+              lineStyle: {
+                  color: '#AC1BF5'
+              },
+              areaStyle: {
+                  color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                      offset: 0,
+                      color: 'rgba(172, 27, 245, 0.3)'
+                  }, {
+                      offset: 1,
+                      color: 'rgba(172, 27, 245, 0.1)'
+                  }])
+              }
+          }]
+      };
+      chart.setOption(option);
+      window.addEventListener('resize', () => chart.resize());
+  </script>
